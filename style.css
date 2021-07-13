@@ -1,0 +1,116 @@
+/* common styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+button{
+    border: none;
+    background-color: #E02C6D;
+    color: white;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 10px 24px;
+    cursor: pointer;
+}
+button i{
+    padding: 0 8px;
+}
+/*----------------------------------------------------------------------------------------
+                            header style starts 
+------------------------------------------------------------------------------------------*/
+
+header{
+    width: 100%;
+    height: 100vh;
+    background: #2D25A0;
+    color: white;
+}
+
+/* nav styles starts here */
+nav{
+    display: flex;
+    width: 80%;   
+    margin: 0 auto;
+    line-height: 24px;
+    font-size: 16px;
+    justify-content: space-between;
+}
+.link-container{
+    flex-grow: 1;
+    margin-top: 40px;
+}
+.link-container ul li{
+    display: inline-block;
+    margin: 0 36px;
+}
+.link-container ul li a{
+    color: white;
+    text-decoration: none;
+}
+.link-container ul li::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: white;
+    display: block;
+    margin: auto;
+    transition: 1s;
+}
+.link-container ul li:hover::after{
+    width: 100%;  
+}
+.logging-button{
+    height: 44px;
+    margin-top: 40px;
+}
+
+/* banner style starts */
+.banner{
+    display: flex;
+    width: 100%;
+    height: 78vh;
+}
+.item{
+    flex-basis: 50%;
+    height: 100%;
+}
+.banner-title{ 
+    display: inline-block;
+    width: 65%;
+    margin-left: 131px;
+    margin-top: 150px;
+}
+.banner-title h1{
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 80px;
+    margin-bottom: 27px;
+}
+.watch-button{
+    width: 168px;
+    height: 44px;
+    border-radius: 70px;
+    transition: transform 0.5s;
+}
+.watch-button:hover{
+    transform: scale(1.2);
+}
+.banner-logo{
+    margin: auto;
+    transition: 1s;
+    height: 100%;
+
+}
+.banner-logo img{
+    height: 100%;
+    padding-top: 67px;
+    transition: transform 1s;
+}
+.banner:hover .banner-logo img{
+    transform: scaleX(-1);
+}
