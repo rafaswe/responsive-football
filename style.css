@@ -8,25 +8,20 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
-button{
-    border: none;
-    background-color: #E02C6D;
-    color: white;
-    font-size: 16px;
-    line-height: 24px;
-    padding: 10px 24px;
-    cursor: pointer;
+h1{
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 80px;
+    margin-bottom: 27px;
+    animation: color-change 1.5s ease-in-out 0s forwards;
 }
-button i{
-    padding: 0 8px;
-}
-.item{
-    flex-basis: 50%;
-    height: 100%;
-}
-section{
-    width: 75%;
-    margin: 68px auto;
+
+@keyframes color-change {
+    0%   {color:rgb(45, 37, 160) ;}
+    25%  {color:rgb(105, 102, 145);}
+    50%  {color: rgb(212, 212, 157);}
+    75%  {color: wheat}
+    100% {color: white;}
 }
 h2{
     font-weight: bold;
@@ -35,14 +30,39 @@ h2{
     margin-bottom: 8px;
     transition: 0.5s;
 }
-section:hover h2{
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
 h3{
     font-weight: bold;
     font-size: 28px;
     line-height: 40px;
     margin-bottom: 10px;
+}
+button{
+    border: none;
+    background-color: #E02C6D;
+    color: white;
+    height: 100%;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 10px 24px;
+    cursor: pointer;
+}
+button i{
+    padding: 0 8px;
+}
+section{
+    width: 75%;
+    margin: 68px auto;
+}
+
+section:hover h2{
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.item{
+    width: 50%;
+    height: 100%;
+}
+.row{
+    display: flex;
 }
 /*----------------------------------------------------------------------------------------
                             header style starts 
@@ -52,18 +72,28 @@ header{
     width: 100%;
     height: 100vh;
     background: #2D25A0;
-    color: white;
 }
-
-
 /* nav styles starts here */
 nav{
-    display: flex;
     width: 80%;   
     margin: 0 auto;
     line-height: 24px;
     font-size: 16px;
     justify-content: space-between;
+}
+.log{
+    display: flex;
+    margin-bottom: 46px;
+}
+.log .icon{
+    display: none;
+    font-size: 24px;
+    padding: 15px;
+    color: white;
+}
+.logging-button{
+    height: 44px;
+    margin-top: 40px;
 }
 .link-container{
     flex-grow: 1;
@@ -89,14 +119,10 @@ nav{
 .link-container ul li:hover::after{
     width: 100%;  
 }
-.logging-button{
-    height: 44px;
-    margin-top: 40px;
-}
+
 
 /* banner style starts */
 .banner{
-    display: flex;
     width: 100%;
     height: 78vh;
 }
@@ -107,16 +133,10 @@ nav{
     margin-left: 131px;
     margin-top: 150px;
 }
-.banner-title h1{
-    font-weight: 700;
-    font-size: 64px;
-    line-height: 80px;
-    margin-bottom: 27px;
-}
+
 .watch-button{
     width: 168px;
     height: 44px;
-    border-radius: 70px;
     transition: transform 0.5s;
 }
 .watch-button:hover{
@@ -131,7 +151,7 @@ nav{
 .banner-logo img{
     height: 100%;
     padding-top: 67px;
-    transition: transform 1s;
+    transition: transform 1.2s;
 }
 .banner:hover .banner-logo img{
     transform: scaleX(-1);
@@ -151,6 +171,10 @@ nav{
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
     padding: 15px 15px 33px 15px;
     border-radius: 10px;
+    transition: 0.5s;
+}
+.player:hover{
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.55);
 }
 .player .player-photo{
     width: 100%;
@@ -166,14 +190,13 @@ nav{
 
 /* Highlights style */
 .highlights{
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
 }
 
 .highlights .highlights-text{
-    width: 470px;
+    width: 85%;
+    padding-top: 80px;
 }
 
 .highlights-text p{
@@ -242,13 +265,12 @@ footer{
     width: 100%;
 }
 .footer{
-
     width: 33%;
     margin: auto;
     text-align: center;
     padding-bottom: 63px;
 }
-.footer img{
+.footer .footer-logo img{
     width: 100%;
      height: 110px;
 }
@@ -264,4 +286,155 @@ footer{
 .footer p{
     font-size: 18px;
     line-height: 24px;
+}
+
+/*----------------------------------------------------------------------------------------
+                            Media query style starts 
+------------------------------------------------------------------------------------------*/
+
+/* Styles for tablet */
+@media screen and (max-width:992px){
+    section{
+        width: 80%;
+        margin: 68px auto;
+    }
+    h1{
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 35px;
+        margin-bottom: 27px;
+    }
+    .row{
+        flex-direction: column;
+    }
+    /* nav style starts */
+    nav{
+        width: 100%;
+        justify-content: center;
+        box-sizing: border-box;
+        padding-right: 15px;
+    }
+    .link-container{
+        display: none;
+    }
+    .log{
+        margin-top: 10px;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .log .icon{
+        display: block;
+    }
+    .logging-button{
+        width: 100%;
+        padding: 0;
+        order: 1;
+        display: block;
+        margin: 1%;
+        text-align: end;
+    }
+    /* banner style starts */
+    
+    .banner{
+        margin-top: 2%;
+        box-sizing: border-box;
+    }
+    .banner-title{
+        margin-top: 0px;
+        align-items: center;
+        margin-bottom: 10px;
+        margin-left: 10%;
+    }
+    .banner-logo{
+        display: inline-block;
+        align-items: center;
+        width: 80%;
+        height: 70%;
+    }
+    .banner-logo img{
+        padding:0 ;
+        margin: 0;
+        height: 100%;
+        width: 80%;       
+    }
+    /* player list starts */
+    .player-list{
+        grid-template-columns: repeat(2,1fr);
+    }
+    /* highlights section starts */
+    .highlights{
+        grid-template-columns: 1fr;
+        grid-row-gap: 29px;
+    }
+    .highlights .highlights-text{
+        width: 100%;
+        padding-top: 0;
+        margin-top: 60px;
+    }
+    /* footer section start */
+    .footer{
+        width: 50%;
+    }
+}
+/* style for mobile */
+@media screen and (max-width:668px){
+    h2{
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 40px;  
+    }
+    h3{
+        font-size: 28px;
+        line-height: 40px;
+    }
+    .item{
+        height: 100%;
+    }
+    
+    /* nav > link-container starts */
+    .link-container ul li{
+        display: none;
+    }
+
+    /* nav > banner starts */
+    .banner{
+        margin-top: 1%;
+        justify-content: space-between;
+    }
+    .banner-title{
+        width: 70%;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    .banner-title h1{
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 50px;
+        margin-bottom: 5px;
+    }
+    .banner-logo{
+        align-items: center;
+        width: 80%;
+        height: 100%;
+        margin-top: 0px;
+    }
+
+    /* player section starts */
+    .player-list{
+        grid-template-columns: 1fr;
+    }
+    
+    .photos{
+        grid-template-columns: 1fr;
+    }
+    /* footer > .footer starts */
+    .footer{
+        width: 100%;
+        padding:10px 62px 60px;        
+    }
+    .footer .footer-logo img{
+        width: 100%;
+         height: 63px;
+    }
+
 }
