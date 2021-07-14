@@ -20,6 +20,30 @@ button{
 button i{
     padding: 0 8px;
 }
+.item{
+    flex-basis: 50%;
+    height: 100%;
+}
+section{
+    width: 75%;
+    margin: 68px auto;
+}
+h2{
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 60px;
+    margin-bottom: 8px;
+    transition: 0.5s;
+}
+section:hover h2{
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+h3{
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
 /*----------------------------------------------------------------------------------------
                             header style starts 
 ------------------------------------------------------------------------------------------*/
@@ -30,6 +54,7 @@ header{
     background: #2D25A0;
     color: white;
 }
+
 
 /* nav styles starts here */
 nav{
@@ -75,10 +100,7 @@ nav{
     width: 100%;
     height: 78vh;
 }
-.item{
-    flex-basis: 50%;
-    height: 100%;
-}
+
 .banner-title{ 
     display: inline-block;
     width: 65%;
@@ -86,7 +108,7 @@ nav{
     margin-top: 150px;
 }
 .banner-title h1{
-    font-weight: bold;
+    font-weight: 700;
     font-size: 64px;
     line-height: 80px;
     margin-bottom: 27px;
@@ -113,4 +135,133 @@ nav{
 }
 .banner:hover .banner-logo img{
     transform: scaleX(-1);
+}
+
+/*----------------------------------------------------------------------------------------
+                            main style starts 
+------------------------------------------------------------------------------------------*/
+/* player list style */
+.player-list{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 27px;
+}
+.player{ 
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    padding: 15px 15px 33px 15px;
+    border-radius: 10px;
+}
+.player .player-photo{
+    width: 100%;
+    height: 256px;
+    margin-bottom: 16px;
+    border-radius: 10px;
+}
+.player p{
+    font-size: 16px;
+    line-height: 26px;
+    color: #6C6C6C;
+}
+
+/* Highlights style */
+.highlights{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.highlights .highlights-text{
+    width: 470px;
+}
+
+.highlights-text p{
+    font-size: 16px;
+    line-height: 28px;
+    color: #6C6C6C;
+    margin-bottom: 24px;
+}
+.highlights .highlights-picture {
+    width: 100%;
+
+}
+.highlights .highlights-picture img{
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.highlights .highlights-picture img:hover{
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.5);
+}
+/* final video styles */
+.final-video{
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 40px;
+    transition: 0.5s;
+}
+.final-video:hover{
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.5);
+}
+.final-video iframe{
+    width: 80%;
+    height: 60vh;
+    border-radius: 30px;
+    margin-bottom: 40px;
+}
+/*gallery styles */
+.gallery{
+    text-align: center;
+}
+.photos{
+    display: grid;
+    grid-template-columns: repeat(3,1fr); 
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+.photos img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: 1s;
+}
+.photos .photo{
+    border-radius: 10px;
+    overflow: hidden;
+}
+.photos img:hover{
+    transform: scale(1.2);
+}
+
+/*----------------------------------------------------------------------------------------
+                            footer style starts 
+------------------------------------------------------------------------------------------*/
+footer{
+    width: 100%;
+}
+.footer{
+
+    width: 33%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 63px;
+}
+.footer img{
+    width: 100%;
+     height: 110px;
+}
+.footer .footer-link{
+    margin: 20px;
+}
+.footer .footer-link span{
+    margin: 0 10px;
+    font-size: 2rem;
+    color: #969BAB;
+    cursor: pointer;
+}
+.footer p{
+    font-size: 18px;
+    line-height: 24px;
 }
