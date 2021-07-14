@@ -283,6 +283,25 @@ footer{
     color: #969BAB;
     cursor: pointer;
 }
+.fa-instagram,.fa-dribbble,.fa-twitter,.fa-youtube{
+    transition: 1s;
+}
+.footer .footer-link span .fa-instagram:hover{
+    color: brown;
+    transform: scale(1.2);
+}
+.footer .footer-link span .fa-dribbble:hover{
+    color: rgb(97, 97, 240);
+    transform: scale(1.2);
+}
+.footer .footer-link span .fa-twitter:hover{
+    color: darkblue;
+    transform: scale(1.2);
+}
+.footer .footer-link span .fa-youtube:hover{
+    color: red;
+    transform: scale(1.2);
+}
 .footer p{
     font-size: 18px;
     line-height: 24px;
